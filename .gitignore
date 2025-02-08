@@ -1,0 +1,9 @@
+# Ignorer le dossier output/ et tous ses fichiers
+output/
+
+# Ignorer tous les fichiers .log
+echo "venv/" 
+echo "venv/Lib/site-packages/PySide6/Qt6WebEngineCore.dll"
+
+# Ignorer l'environnement virtuel complet
+venv/
