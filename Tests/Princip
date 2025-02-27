@@ -1,0 +1,96 @@
+import os
+import tkinter as tk
+from tkinter import ttk, messagebox
+import configparser
+from datetime import datetime
+import pandas as pd
+import requests
+
+# Charger la configuration API
+CONFIG_PATH = os.path.expanduser("~/.config/pybliometrics.cfg")
+def load_api_keys():
+    config = configparser.ConfigParser()
+    config.read(CONFIG_PATH)
+    try:
+        return config['Authentication']['APIKey'], config['Authentication']['InstToken']
+    except KeyError:
+        raise ValueError("API Key ou Token Institutionnel introuvables.")
+
+# Interface Graphique (GUI)
+class PrincDiscipApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("PrincDiscip - Rapport des principales disciplines")
+        self.root.geometry("900x700")
+        self.root.configure(bg="#f0f0f0")
+
+        # Logo ETS
+        self.logo = tk.PhotoImage(file="ets_logo.png")
+        logo_label = tk.Label(root, image=self.logo, bg="#f0f0f0")
+        logo_label.pack(pady=5)
+
+        # Titre
+        title = tk.Label(root, text="Bienvenue sur PrincDiscip, le logiciel qui vous permet de générer automatiquement le rapport des principales disciplines des auteurs.",
+                         font=("Helvetica", 14, "bold"), wraplength=850, bg="#f0f0f0")
+        title.pack(pady=10)
+
+        # Champs de saisie
+        self.create_label_entry("ID Scopus de l'auteur (en bleu)", "author_id")
+        self.create_label_entry("Année de début (en bleu)", "start_year")
+        self.create_label_entry("Année de fin (en bleu)", "end_year")
+
+        # Bouton Générer
+        button_frame = tk.Frame(root, bg="#f0f0f0")
+        button_frame.pack(pady=10)
+
+        self.generate_button = tk.Button(button_frame, text="Générer le rapport", command=self.generate_report, bg="#007bff", fg="white", font=("Helvetica", 12, "bold"))
+        self.generate_button.pack(side="left", padx=10)
+
+        # Bouton Nouvelle recherche
+        self.reset_button = tk.Button(button_frame, text="Nouvelle recherche", command=self.reset_fields, bg="#28a745", fg="white", font=("Helvetica", 12, "bold"))
+        self.reset_button.pack(side="left", padx=10)
+
+        # Zone de sortie
+        self.output_text = tk.Text(root, height=15, width=100, bg="white", fg="black", wrap="word")
+        self.output_text.pack(pady=5)
+        self.output_text.insert("1.0", "✅ Résultats des principales disciplines :\n")
+
+    def create_label_entry(self, label_text, attribute):
+        frame = tk.Frame(self.root, bg="#f0f0f0")
+        frame.pack(pady=5)
+        label = tk.Label(frame, text=f"{label_text} :", font=("Helvetica", 11), bg="#f0f0f0")
+        label.pack(side="left")
+        entry = tk.Entry(frame, width=40)
+        entry.pack(side="left", padx=10)
+        setattr(self, attribute, entry)
+
+    def generate_report(self):
+        author_id = self.author_id.get()
+        start_year = self.start_year.get()
+        end_year = self.end_year.get()
+
+        if not (author_id and start_year.isdigit() and end_year.isdigit()):
+            messagebox.showerror("Erreur", "Veuillez entrer des informations valides.")
+            return
+
+        api_key, inst_token = load_api_keys()
+
+        try:
+            # Appel du backend (exécution du script principal)
+            os.system(f"python PrincDiscip_Main.py {author_id} {start_year} {end_year}")
+            self.output_text.insert("end", f"\n✅ Rapport généré avec succès pour l'auteur {author_id} de {start_year} à {end_year}.\n")
+        except Exception as e:
+            messagebox.showerror("Erreur", str(e))
+
+    def reset_fields(self):
+        """Réinitialiser les champs pour une nouvelle recherche."""
+        self.author_id.delete(0, tk.END)
+        self.start_year.delete(0, tk.END)
+        self.end_year.delete(0, tk.END)
+        self.output_text.delete("1.0", tk.END)
+        self.output_text.insert("1.0", "✅ Résultats des principales disciplines :\n")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = PrincDiscipApp(root)
+    root.mainloop()

@@ -1,0 +1,42 @@
+2025-02-26 12:04:33,614 - DEBUG - Clés API chargées avec succès.
+2025-02-26 12:04:33,615 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-26 12:04:34,019 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2857203307224%29+AND+PUBYEAR+%3E+1999+AND+PUBYEAR+%3C+2024&count=0 HTTP/1.1" 200 None
+2025-02-26 12:04:34,019 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-26 12:04:34,317 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2857203307224%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&count=0 HTTP/1.1" 200 None
+2025-02-26 12:04:34,319 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-26 12:04:34,563 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2857203307224%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&facets=subjarea&count=0 HTTP/1.1" 200 None
+2025-02-26 12:04:41,404 - DEBUG - Clés API chargées avec succès.
+2025-02-26 12:04:41,405 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-26 12:04:41,788 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2857203307224%29+AND+PUBYEAR+%3E+1999+AND+PUBYEAR+%3C+2024&count=0 HTTP/1.1" 200 None
+2025-02-26 12:04:41,788 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-26 12:04:42,259 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2857203307224%29+AND+PUBYEAR+%3E+2013+AND+PUBYEAR+%3C+2026&count=0 HTTP/1.1" 200 None
+2025-02-26 12:04:42,259 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-26 12:04:42,662 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2857203307224%29+AND+PUBYEAR+%3E+2013+AND+PUBYEAR+%3C+2026&facets=subjarea&count=0 HTTP/1.1" 200 None
+2025-02-27 09:29:01,540 - DEBUG - Clés API chargées avec succès.
+2025-02-27 09:29:01,992 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:29:02,447 - DEBUG - https://api.elsevier.com:443 "GET /content/search/author?query=AUTHLAST%28Melhado%29+AND+AUTHFIRST%28Silvio%29&count=10 HTTP/1.1" 200 None
+2025-02-27 09:29:02,450 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:29:03,459 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&count=0 HTTP/1.1" 200 None
+2025-02-27 09:29:03,478 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:29:04,627 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&facets=subjarea&count=0 HTTP/1.1" 200 None
+2025-02-27 09:29:33,612 - DEBUG - Clés API chargées avec succès.
+2025-02-27 09:29:33,614 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:29:33,948 - DEBUG - https://api.elsevier.com:443 "GET /content/search/author?query=AUTHLAST%28Melhado%29+AND+AUTHFIRST%28Silvio%29&count=10 HTTP/1.1" 200 None
+2025-02-27 09:29:33,953 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:29:34,406 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&count=0 HTTP/1.1" 200 None
+2025-02-27 09:29:34,429 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:29:34,867 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&facets=subjarea&count=0 HTTP/1.1" 200 None
+2025-02-27 09:50:29,273 - DEBUG - Clés API chargées avec succès.
+2025-02-27 09:50:29,274 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:50:29,837 - DEBUG - https://api.elsevier.com:443 "GET /content/search/author?query=AUTHLAST%28Melhado%29+AND+AUTHFIRST%28Silvio%29&count=10 HTTP/1.1" 200 None
+2025-02-27 09:50:29,839 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:50:30,667 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&count=0 HTTP/1.1" 200 None
+2025-02-27 09:50:30,675 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 09:50:31,617 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&facets=subjarea&count=0 HTTP/1.1" 200 None
+2025-02-27 10:12:58,305 - DEBUG - Clés API chargées avec succès.
+2025-02-27 10:12:58,306 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 10:12:58,738 - DEBUG - https://api.elsevier.com:443 "GET /content/search/author?query=AUTHLAST%28Melhado%29+AND+AUTHFIRST%28Silvio%29&count=10 HTTP/1.1" 200 None
+2025-02-27 10:12:58,739 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 10:12:59,809 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&count=0 HTTP/1.1" 200 None
+2025-02-27 10:12:59,835 - DEBUG - Starting new HTTPS connection (1): api.elsevier.com:443
+2025-02-27 10:13:00,424 - DEBUG - https://api.elsevier.com:443 "GET /content/search/scopus?query=AU-ID%2835726950800%29+AND+PUBYEAR+%3E+2018+AND+PUBYEAR+%3C+2026&facets=subjarea&count=0 HTTP/1.1" 200 None

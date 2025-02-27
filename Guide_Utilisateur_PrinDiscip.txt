@@ -1,0 +1,67 @@
+
+===============================================
+📘 GUIDE D'UTILISATION - Application PrinDiscip
+===============================================
+
+Bonjour ! Ce guide vous explique comment utiliser l'application PrinDiscip pour générer des rapports Excel sur les principales disciplines des auteurs Scopus.
+
+---
+🔧 1. INSTALLATION DES PRÉREQUIS
+--------------------------------
+1. Installez Python si ce n'est pas déjà fait :
+   - Téléchargez la dernière version ici : https://www.python.org/downloads/
+   - Assurez-vous d'activer l'option "Add Python to PATH" pendant l'installation.
+
+2. Installez les bibliothèques nécessaires :
+   Ouvrez un terminal (ou PowerShell sous Windows) et exécutez :
+   ```bash
+   pip install openpyxl pandas requests pybliometrics
+   ```
+
+---
+🔑 2. CONFIGURATION DES CLÉS API
+---------------------------------
+L'application utilise l'API Scopus pour récupérer les données. Voici comment configurer vos clés API :
+
+1. Lors du premier lancement, l'application vous demandera :  
+   - **API Key** : Clé API Scopus (obtenue via https://dev.elsevier.com/)  
+   - **InstToken** : Jeton de votre institution (si applicable)
+
+2. Ces clés seront enregistrées dans le fichier suivant :  
+   `C:\Users\VotreNom\.config\pybliometrics.cfg`
+
+⚠️ Si vous changez d'ordinateur, il faudra reconfigurer ces clés.
+
+---
+🚀 3. EXÉCUTION DE L'APPLICATION
+--------------------------------
+Pour exécuter l'application :
+
+1. Double-cliquez sur le fichier **PrincDiscip.exe** dans le dossier `dist`.
+2. Entrez les informations demandées :  
+   - **Nom de l'auteur** (exemple : "Dupont, Jean")  
+   - **ID Scopus de l'auteur** (si connu)  
+   - **Période d'analyse** (ou cochez *5 dernières années*)  
+3. Le rapport Excel sera généré automatiquement dans le dossier choisi.
+
+---
+💡 4. DÉPANNAGE EN CAS DE PROBLÈME
+----------------------------------
+Voici quelques solutions si vous rencontrez des difficultés :
+
+1. **Message : "Clé API manquante"**  
+   👉 Supprimez le fichier `pybliometrics.cfg` dans `C:\Users\VotreNom\.config\` et relancez l'application.
+
+2. **Erreur : "Le fichier Excel n'a pas été créé"**  
+   👉 Vérifiez que vous avez les droits d'écriture dans le dossier de sauvegarde.
+
+3. **L'application ne s'ouvre pas**  
+   👉 Désactivez temporairement l'antivirus et réessayez.
+
+---
+📞 **BESOIN D'AIDE ?**
+---------------------------------
+Contactez l'administrateur de l'application ou vérifiez le fichier de log `princdiscip.log` situé dans le même dossier que l'application.
+
+---
+🎉 **Merci d'utiliser PrinDiscip ! Bonne analyse !**
