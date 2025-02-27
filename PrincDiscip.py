@@ -146,8 +146,6 @@ def load_api_keys():
 
 
 
-
-
 def load_save_path():
     """Charger le chemin de sauvegarde depuis la configuration locale."""
     config = configparser.ConfigParser()
@@ -284,9 +282,6 @@ def select_author(authors):
         return selected_id
     else:
         return None
-
-
-
 
 
 #  Créer un fichier Excel avec le graphique
@@ -641,10 +636,6 @@ class PrincDiscipApp:
 
 
 
-
-
-
-
     def reset_fields(self):
         """Réinitialiser les champs pour une nouvelle recherche."""
         # Vider tous les champs
@@ -666,10 +657,7 @@ class PrincDiscipApp:
         self.output_text.delete("1.0", tk.END)
         self.author_id.focus_set()
 
-
-
-    
-
+ 
 if __name__ == "__main__":
     root = tk.Tk()
     app = PrincDiscipApp(root)
